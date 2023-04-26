@@ -1,6 +1,12 @@
 # Reverseshell_Hijack
 
 
+VICTIM has ROUTER as default gw. Router is configured to use DNAT and route all traffic to the SNIFFER.
+The SNIFFER is listining and capture all SYN pakets. If one SYN paket arrives with a target port, the monitor.py script will open a listener over a screen session.
+
+
+
+
 Execute:
 sudo stdbuf --output=0 tcpdump -i any -nnnv "tcp[tcpflags]=(tcp-syn)" | python3 monitor_traffic.py
 
