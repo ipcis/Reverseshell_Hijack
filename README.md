@@ -7,19 +7,22 @@ The SNIFFER is listining and capture all SYN pakets. If one SYN paket arrives wi
 
 
 
-Execute:
+Execute
+```
 sudo stdbuf --output=0 tcpdump -i any -nnnv "tcp[tcpflags]=(tcp-syn)" | python3 monitor_traffic.py
-
+```
+Commands
+```
 screen -ls
 screen -r <name>
 
 Detach screen-sessions
 str+a d
-
-
-
+```
+Communication-chain
+```
 VICTIM -> ROUTER (DNAT) -> SNIFFER
-
+```
 
 IPTABLES
 https://gridscale.io/community/tutorials/tutorial-debian-routergateway-10minuten/
