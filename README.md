@@ -1,4 +1,4 @@
-# Reverseshell_Hijack
+# Reverse-shell-hijack
 
 
 VICTIM has ROUTER as default gw. Router is configured to use DNAT and route all traffic to the SNIFFER.
